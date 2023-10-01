@@ -6,10 +6,6 @@ client.on('ready', () => {
   console.log('Ready!');
 });
 
-client.on('raw', (evt, payload, shard) => {
-  console.log(evt, payload, shard);
-});
-
 client.on('messageCreate', (message: Message) => {
   if (message.content == '!ping') {
     message.reply('Pong!');
